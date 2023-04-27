@@ -10,13 +10,14 @@
 - [Prerequisites](#prerequisites)
 - [Usage](#usage)
 - [Examples](#examples)
-- [Contributors ✨](#contributors-) <!-- markdown-link-check-disable-line -->
-- [Requirements](#requirements) <!-- markdown-link-check-disable-line -->
-- [Providers](#providers) <!-- markdown-link-check-disable-line -->
-- [Modules](#modules) <!-- markdown-link-check-disable-line -->
-- [Resources](#resources) <!-- markdown-link-check-disable-line -->
-- [Inputs](#inputs) <!-- markdown-link-check-disable-line -->
-- [Outputs](#outputs) <!-- markdown-link-check-disable-line -->
+- [Contributors ✨](#contributors-)
+- [Module Documentation](#module-documentation)
+- [Requirements](#requirements)
+- [Providers](#providers)
+- [Modules](#modules)
+- [Resources](#resources)
+- [Inputs](#inputs)
+- [Outputs](#outputs)
 
 ## The module
 
@@ -391,9 +392,9 @@ module "runner" {
   subnet_id                 = module.vpc.private_subnets[0] # subnet of the agent
   fleet_executor_subnet_ids = module.vpc.private_subnets
 
-  docker_machine_instance_types             = ["t3a.medium", "t3.medium", "t2.medium"]
-  use_fleet                                 = true
-  key_pair_name                             = "<key_pair_name>"
+  docker_machine_instance_types_fleet = ["t3a.medium", "t3.medium", "t2.medium"]
+  use_fleet                           = true
+  fleet_key_pair_name                 = "<key_pair_name>"
 
   runners_name       = "docker-machine"
   runners_gitlab_url = "https://gitlab.com"
