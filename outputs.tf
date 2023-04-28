@@ -55,6 +55,5 @@ output "runner_launch_template_name" {
 
 output "runner_user_data" {
   description = "The user data of the Gitlab Runner Agent's launch template."
-  value       = local.template_user_data
-  sensitive   = true
+  value       = nonsensitive(local.template_user_data)
 }
